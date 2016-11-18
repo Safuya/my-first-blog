@@ -26,7 +26,8 @@ SECRET_KEY = '&x_u(^(%r4!9ioz$j=%ym_b#c*v@lq8=!u7k-&j)k1(7+&tep_'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'safuya.pythonanywhere.com'
+    'safuya.pythonanywhere.com',
+    '127.0.0.1',
 ]
 
 
