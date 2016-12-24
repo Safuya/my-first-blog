@@ -1,5 +1,7 @@
 {% load staticfiles %}
+
 <html>
+
     <head>
         <title>Safuya's blog</title>
         <link rel="stylesheet"
@@ -9,10 +11,18 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     </head>
+
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            {% endif %}
+
             <h1><a href="">Safuya's Blog</a></h1>
         </div>
+
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
@@ -22,4 +32,5 @@
             </div>
         </div>
     </body>
+
 </html>
